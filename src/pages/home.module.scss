@@ -1,1 +1,36 @@
-// TODO
+.container{
+    margin-left: 370px;
+}
+
+.postContainer{
+    cursor: pointer;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 22px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            margin-right: 50px;
+            line-height: 100%;
+
+            span {
+                margin-left: 10px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+.loadButton {
+    color: var(--highlight);
+    background: none;
+    border: 0;
+}
