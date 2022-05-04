@@ -1,1 +1,43 @@
-// TODO
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.heading {
+    margin-top: 80px;
+    margin-bottom: 65px;
+
+    .title {
+        margin-bottom: 25px;
+    }
+
+    .subheading {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            margin-right: 50px;
+            line-height: 100%;
+
+            span {
+                margin-left: 10px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .contentHeading {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .postContent{
+        text-align: justify;
+        text-justify: inter-word;
+
+        a {
+            color: var(--highlight)
+        }
+    }
+}

@@ -60,7 +60,7 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
   return (
     <>
       <Header />
-      <div className={styles.container}>
+      <div className={commonStyles.container}>
         {posts.map(post => (
           <Link key={post.data.title} href={`/post/${post.uid}`}>
             <div className={styles.postContainer}>
@@ -72,7 +72,7 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
                   <span>
                     {format(
                       new Date(post.first_publication_date),
-                      'dd/MM/yyyy',
+                      'dd MMM yyyy',
                       { locale: ptBR }
                     )}
                   </span>
@@ -110,7 +110,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const posts = postsResponse.results.map(post => {
     return {
-      slug: post.uid,
+      uid: post.uid,
       first_publication_date: post.first_publication_date,
       data: {
         title: post.data.title,
